@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: samtvs-byvictor
+Version: 1.0.6
+Summary: Python library to control Samsung Tizen TVs through WebSocket.
+Author: Victor Fernando
+License: MIT
+Project-URL: Homepage, https://github.com/SEU_USUARIO/SAMTVS_BYVICTOR
+Project-URL: Repository, https://github.com/SEU_USUARIO/SAMTVS_BYVICTOR
+Project-URL: Issues, https://github.com/SEU_USUARIO/SAMTVS_BYVICTOR/issues
+Keywords: samsung,smart-tv,tizen,websocket,remote-control,automation,iot,home-automation
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: websocket-client>=1.8.0
+Requires-Dist: requests>=2.31.0

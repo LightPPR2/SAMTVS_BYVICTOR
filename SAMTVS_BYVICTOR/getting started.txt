@@ -1,0 +1,9 @@
+# Primeiros passos
+
+```python
+from samtvs_byvictor import SamsungTV
+
+tv = SamsungTV.auto()
+
+tv.connect()
+```

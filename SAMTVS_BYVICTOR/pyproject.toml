@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "samtvs-byvictor"
+version = "1.0.7"
+
+description = "Python library to control Samsung Tizen TVs through WebSocket."
+
+readme = "README.md"
+
+requires-python = ">=3.9"
+
+license = "MIT"
+
+authors = [
+    {name = "Victor Fernando"}
+]
+
+keywords = [
+    "samsung",
+    "smart-tv",
+    "tizen",
+    "websocket",
+    "remote-control",
+    "automation",
+    "iot",
+    "home-automation"
+]
+
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+
+    "Intended Audience :: Developers",
+
+    "License :: OSI Approved :: MIT License",
+
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+
+    "Operating System :: OS Independent",
+
+    "Topic :: Home Automation",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+
+dependencies = [
+    "websocket-client>=1.8.0",
+    "requests>=2.31.0"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/LightPPR2/SAMTVS_BYVICTOR"
+Repository = "https://github.com/LightPPR2/SAMTVS_BYVICTOR"
+Issues = "https://github.com/LightPPR2/SAMTVS_BYVICTOR/issues"
+
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = [
+    "samtvs_byvictor*"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "build",
+    "twine"
+]

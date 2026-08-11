@@ -1,0 +1,21 @@
+site_name: SAMTVS_BYVICTOR
+site_description: Python library to control Samsung Tizen TVs through WebSocket
+site_author: Victor Fernando
+
+repo_name: SAMTVS_BYVICTOR
+repo_url: https://github.com/SEU_USUARIO/SAMTVS_BYVICTOR
+
+theme:
+  name: material
+  language: en
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Quick Start: quickstart.md
+  - API Reference: api.md
+  - Examples: examples.md
+  - Changelog: changelog.md
