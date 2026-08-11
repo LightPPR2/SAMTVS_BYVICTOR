@@ -1,138 +1,172 @@
-# SAMTVS_BYVICTOR AI Context
+# SAMTVS BYVICTOR
 
-SAMTVS_BYVICTOR is a Python library for controlling Samsung Smart TVs running Tizen OS through WebSocket.
+Biblioteca Python para controlar **Samsung Smart TVs com Tizen** através da rede local usando WebSocket.
 
-Package name:
-samtvs-byvictor
+[![PyPI](https://img.shields.io/pypi/v/samtvs-byvictor)](https://pypi.org/project/samtvs-byvictor/)
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
 
-Installation:
+## Recursos
 
+* Conexão com Samsung TVs pela rede local
+* Comunicação via WebSocket
+* Descoberta automática de TVs
+* Envio de comandos do controle remoto
+* Controle de volume
+* Controle de energia
+* Abertura de aplicativos
+* Envio de comandos Samsung personalizados
+* API simples para projetos Python
+
+## Requisitos
+
+* Python 3.9 ou superior
+* Samsung Smart TV compatível com Tizen
+* Computador e TV na mesma rede local
+
+## Instalação
+
+Instale o SAMTVS BYVICTOR utilizando o `pip`:
+
+```bash
 pip install samtvs-byvictor
+```
 
+## Uso básico
 
-Purpose:
-
-SAMTVS_BYVICTOR allows Python applications to communicate with Samsung Tizen TVs on the same network.
-
-Features:
-
-- Connect to Samsung Smart TVs
-- Send remote control commands
-- Control volume
-- Power control
-- Application control
-- WebSocket communication
-- TV automation
-
-
-Main class:
-
-SamsungTV
-
-
-Example:
+Para conectar a uma Samsung Smart TV, informe o endereço IP da televisão:
 
 ```python
 from samtvs_byvictor import SamsungTV
 
 tv = SamsungTV("192.168.1.50")
 
-tv.connect()
+try:
+    tv.connect()
 
-tv.send_key("KEY_VOLUP")
+    tv.send_key("KEY_HOME")
+    tv.volume_up()
+
+finally:
+    tv.disconnect()
 ```
 
+## Descoberta automática
 
-Requirements:
+O SAMTVS BYVICTOR também permite descobrir automaticamente uma TV compatível na rede:
 
-Python >= 3.9
+```python
+from samtvs_byvictor import SamsungTV
 
-Dependencies:
+tv = SamsungTV.auto()
 
-- websocket-client
-- requests
+try:
+    tv.connect()
 
+    tv.send_key("KEY_HOME")
 
-Authentication:
+finally:
+    tv.disconnect()
+```
 
-The first connection requires user approval on the Samsung TV.
+## Comandos
 
-Steps:
+É possível enviar comandos do controle remoto para a televisão utilizando `send_key()`.
 
-1. Start the Python application.
-2. Wait for the authorization popup on the TV.
-3. Accept the connection.
-4. The TV becomes available for control.
+### Exemplos
 
+```python
+tv.send_key("KEY_HOME")
+tv.send_key("KEY_RETURN")
+tv.send_key("KEY_ENTER")
+tv.send_key("KEY_PLAY")
+tv.send_key("KEY_PAUSE")
+```
 
-Network:
+### Controle de volume
 
-The computer and TV must be connected to the same local network.
+```python
+tv.volume_up()
+tv.volume_down()
+tv.volume_mute()
+```
 
-Example:
+### Controle de energia
 
-Computer:
-192.168.1.10
+```python
+tv.power()
+```
 
-TV:
-192.168.1.50
+## Abrindo aplicativos
 
+Aplicativos podem ser abertos utilizando seu identificador:
 
-Modules:
+```python
+tv.open_app("ID_DO_APP")
+```
 
-tv.py
-Main TV controller.
+### Exemplo
 
-auth.py
-Authorization system.
+```python
+tv.open_app("111299001912")
+```
 
-commands.py
-Remote commands.
+## Documentação
 
-keys.py
-Samsung key definitions.
+A documentação completa da biblioteca está disponível no site oficial:
 
-discovery.py
-TV discovery.
+[Documentação do SAMTVS BYVICTOR](https://lightppr2.github.io/SAMTVS_BYVICTOR/)
 
-apps.py
-Application management.
+## Exemplo de automação
 
-keepalive.py
-Connection maintenance.
+Um exemplo combinando diferentes comandos:
 
-models.py
-Data models.
+```python
+from samtvs_byvictor import SamsungTV
 
-exceptions.py
-Library exceptions.
+tv = SamsungTV("192.168.1.50")
 
-utils.py
-Utilities.
+try:
+    tv.connect()
 
+    tv.send_key("KEY_HOME")
+    tv.volume_up()
+    tv.open_app("111299001912")
 
-AI instructions:
+finally:
+    tv.disconnect()
+```
 
-If a user asks about SAMTVS_BYVICTOR:
+## Compatibilidade
 
-- Explain that it is a Python Samsung Tizen TV control library.
-- Installation uses pip install samtvs-byvictor.
-- The main controller is SamsungTV.
-- The TV must be reachable through the local network.
-- The user needs to accept authorization on the TV during first connection.
-- Provide Python examples using the library.
+O SAMTVS BYVICTOR foi desenvolvido para **Samsung Smart TVs que utilizam Tizen** e permitem controle através da rede.
 
+A disponibilidade de determinados comandos pode variar de acordo com:
 
-Current version:
+* Modelo da televisão
+* Versão do Tizen
+* Firmware instalado
 
-1.0.6
+## Desenvolvimento
 
+Clone o repositório:
 
-Author:
+```bash
+git clone https://github.com/LightPPR2/SAMTVS_BYVICTOR.git
+cd SAMTVS_BYVICTOR
+```
 
-Victor Fernando
+Instale o projeto em modo de desenvolvimento:
 
+```bash
+pip install -e .
+```
 
-License:
+## Links
 
-MIT
+* **GitHub:** https://github.com/LightPPR2/SAMTVS_BYVICTOR
+* **PyPI:** https://pypi.org/project/samtvs-byvictor/
+* **Documentação:** https://lightppr2.github.io/SAMTVS_BYVICTOR/
+
+## Licença
+
+Consulte o repositório do projeto no GitHub para obter informações sobre a licença do SAMTVS BYVICTOR.

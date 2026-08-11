@@ -1,132 +1,104 @@
-# Getting Started
+Instalação
+Requisitos
 
-Guia inicial para começar a usar o **SAMTVS BYVICTOR**.
+Antes de instalar o SAMTVS BYVICTOR, certifique-se de que você possui:
 
-Esta biblioteca permite controlar TVs Samsung Tizen através de Python usando comunicação WebSocket.
+Python 3.9 ou superior
+Uma Samsung Smart TV compatível com Tizen
+Computador e TV conectados à mesma rede local
+Instalação pelo PyPI
 
----
+A forma recomendada de instalar a biblioteca é através do pip:
 
-# Instalação
-
-Instale a biblioteca usando o pip:
-
-```bash
 pip install samtvs-byvictor
 
-Após instalar, importe a biblioteca:
 
-from samtvs_byvictor import SamsungTV
+Para atualizar para a versão mais recente:
 
-Preparando a TV
+pip install --upgrade samtvs-byvictor
 
-Antes de usar:
+Verificando a instalação
 
-A TV deve estar ligada.
-A TV e o computador precisam estar na mesma rede.
-O controle remoto pela rede deve estar permitido.
-Encontrando o IP da TV
+Depois da instalação, abra o Python:
 
-Na sua TV Samsung:
+python
 
-Configurações
-→ Geral
-→ Rede
-→ Status da rede
 
-Procure pelo endereço IP.
+E execute:
 
-Exemplo:
+import samtvs_byvictor
 
-192.168.1.50
-Criando a conexão
+print("SAMTVS BYVICTOR instalado com sucesso!")
 
-Crie uma instância da TV:
 
-from samtvs_byvictor import SamsungTV
+Se não ocorrer nenhum erro, a biblioteca foi instalada corretamente.
 
-tv = SamsungTV("192.168.1.50")
+Também é possível verificar a versão instalada usando:
 
-Substitua o IP pelo endereço da sua televisão.
+pip show samtvs-byvictor
 
-Conectando
+Instalação a partir do código-fonte
 
-Conecte usando:
+Para instalar a versão disponível no repositório do GitHub, primeiro clone o projeto:
 
-tv.connect()
+git clone https://github.com/LightPPR2/SAMTVS_BYVICTOR.git
 
-Na primeira conexão:
 
-Execute o programa.
-Olhe a tela da TV.
-Aceite a solicitação de controle remoto.
-Primeiro comando
+Entre na pasta do projeto:
 
-Depois de conectado:
+cd SAMTVS_BYVICTOR
 
-tv.send_key("KEY_HOME")
 
-A tela inicial da TV será aberta.
+Depois instale a biblioteca:
 
-Controle de volume
+pip install .
 
-Aumentar volume:
 
-tv.volume_up()
+Para instalar em modo editável, útil durante o desenvolvimento:
 
-Diminuir volume:
+pip install -e .
 
-tv.volume_down()
 
-Silenciar:
+Nesse modo, alterações feitas no código-fonte ficam disponíveis sem precisar reinstalar o pacote a cada mudança.
 
-tv.volume_mute()
+Dependências
 
-Exemplo completo
-from samtvs_byvictor import SamsungTV
+O SAMTVS BYVICTOR utiliza as seguintes dependências principais:
 
-IP_DA_TV = "192.168.1.50"
+websocket-client
+requests
 
-tv = SamsungTV(IP_DA_TV)
+Elas são instaladas automaticamente pelo pip ao instalar o pacote.
 
-try:
-    tv.connect()
+Não é necessário instalar essas dependências manualmente em uma instalação normal.
 
-    print("TV conectada!")
+Ambiente virtual
 
-    tv.send_key("KEY_HOME")
+É recomendado utilizar um ambiente virtual para evitar conflitos entre dependências de diferentes projetos.
 
-    tv.volume_up()
+No Windows:
 
-finally:
-    tv.disconnect()
-Enviando comandos personalizados
+python -m venv .venv
 
-A biblioteca permite enviar comandos Samsung diretamente:
 
-tv.send_key("KEY_COMANDO")
+Ative o ambiente:
 
-Exemplos:
+.venv\Scripts\activate
 
-tv.send_key("KEY_RETURN")
 
-tv.send_key("KEY_ENTER")
+Depois instale a biblioteca:
 
-tv.send_key("KEY_PLAY")
+pip install samtvs-byvictor
 
-tv.send_key("KEY_PAUSE")
-Abrindo aplicativos
 
-Caso o aplicativo seja compatível:
+Para sair do ambiente virtual:
 
-tv.open_app("ID_DO_APP")
+deactivate
 
-Exemplo:
+Próximos passos
 
-tv.open_app("111299001912")
-Desconectando
+Depois de instalar a biblioteca, consulte o Quickstart para realizar a primeira conexão com uma Samsung TV.
 
-Quando terminar:
+Para consultar os métodos disponíveis, veja a API Reference.
 
-tv.disconnect()
-
-Isso encerra a conexão com a televisão.
+Para exemplos de automação e utilização, consulte Exemplos.

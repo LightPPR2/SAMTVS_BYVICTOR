@@ -1,73 +1,66 @@
-# Installation
+SAMTVS BYVICTOR
 
-## Requirements
+SAMTVS BYVICTOR é uma biblioteca Python para controlar TVs Samsung com sistema Tizen através da rede local usando WebSocket.
 
-Before installing SAMTVS_BYVICTOR, make sure you have:
+Com ela, você pode conectar a uma Samsung TV e enviar comandos como controle remoto, controlar o volume, abrir aplicativos e utilizar outros recursos disponíveis pela biblioteca.
 
-- Python 3.9 or newer
-- A Samsung Smart TV running Tizen OS
-- Computer and TV connected to the same local network
+Recursos
+Conexão com Samsung TVs pela rede local
+Comunicação através de WebSocket
+Descoberta automática de TVs
+Envio de comandos do controle remoto
+Controle de volume
+Controle de energia
+Abertura de aplicativos
+Envio de comandos Samsung personalizados
+API Python simples
+Instalação
 
-
-## Install using pip
-
-Install the latest version from PyPI:
-
+Instale a versão mais recente diretamente pelo PyPI:
 
 pip install samtvs-byvictor
 
+Primeiro exemplo
+from samtvs_byvictor import SamsungTV
+
+tv = SamsungTV("192.168.1.100")
+
+tv.connect()
+
+tv.send_key("KEY_HOME")
+tv.volume_up()
+
+tv.disconnect()
 
 
-## Verify installation
+Substitua 192.168.1.100 pelo endereço IP da sua TV.
 
-Run Python:
+Na primeira conexão, a televisão pode solicitar autorização para o dispositivo. Nesse caso, aceite a solicitação usando o controle remoto da TV.
 
+Documentação
+Instalação
+Quickstart
+API Reference
+Exemplos
+Changelog
+Requisitos
 
-python
+Antes de utilizar a biblioteca, certifique-se de que:
 
+Você possui Python 3.9 ou superior.
+Sua televisão é uma Samsung Smart TV compatível com Tizen.
+O computador e a TV estão conectados à mesma rede local.
+O controle remoto pela rede está permitido na televisão.
+Projeto
 
-Then:
-
-
-import samtvs_byvictor
-
-print("SAMTVS_BYVICTOR installed successfully")
-
-
-
-## Install from source
-
-Clone the repository:
-
-git clone https://github.com/LightPPR2/SAMTVS_BYVICTOR.git
-
-
-Enter the folder:
-
-
-cd SAMTVS_BYVICTOR
-
-
-Install:
-
-
-pip install .
-
-
-
-## Dependencies
-
-SAMTVS_BYVICTOR automatically installs:
-
-- websocket-client
-- requests
-
-Links
-
-GitHub:
+O código-fonte do projeto está disponível no GitHub:
 
 https://github.com/LightPPR2/SAMTVS_BYVICTOR
 
-PyPI:
+A biblioteca também está disponível no PyPI:
 
 https://pypi.org/project/samtvs-byvictor/
+
+Licença
+
+Consulte o arquivo LICENSE do projeto para obter informações sobre a licença.

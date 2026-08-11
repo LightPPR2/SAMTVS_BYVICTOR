@@ -1,126 +1,82 @@
-# Changelog
+Changelog
 
-Histórico de alterações do **SAMTVS BYVICTOR**.
+Histórico de alterações do SAMTVS BYVICTOR.
 
-Todas as versões e mudanças importantes da biblioteca são registradas aqui.
+As versões abaixo representam as versões publicadas e alterações relevantes do projeto.
 
----
-
-# 1.0.6
+1.0.6
 
 Data: 2026-08-10
 
-## Adicionado
+Primeira versão pública do SAMTVS BYVICTOR.
 
-- Primeira versão pública disponível no PyPI.
-- Documentação inicial com MkDocs.
-- Estrutura organizada da biblioteca.
-- Suporte para instalação via pip.
-- Melhor organização dos módulos internos.
-- Preparação para documentação automática.
+Adicionado
+Publicação do pacote no PyPI.
+Instalação através do pip.
+Controle de TVs Samsung Tizen através de WebSocket.
+Classe principal SamsungTV.
+Conexão com a TV através do endereço IP.
+Descoberta automática de TVs.
+Envio de comandos Samsung através de send_key().
+Controle de volume.
+Controle de energia.
+Abertura de aplicativos.
+Documentação inicial.
+Exemplos de utilização.
+Melhorias
+Organização dos módulos internos.
+Separação entre conexão, autenticação, comandos e descoberta.
+Estrutura preparada para futuras versões.
+Configuração de empacotamento através do pyproject.toml.
+Documentação
 
-## Melhorias
+Adicionada documentação inicial contendo:
 
-- Código reorganizado para facilitar manutenção.
-- Melhor separação entre conexão, comandos e modelos.
-- Melhor experiência para desenvolvedores.
+Instalação
+Quickstart
+Referência da API
+Exemplos
+Changelog
+Versões anteriores
 
-## Correções
+As versões 1.0.2, 1.0.3, 1.0.4 e 1.0.5 foram utilizadas durante o desenvolvimento e em tentativas de publicação do pacote.
 
-- Corrigidos problemas de empacotamento.
-- Corrigidos arquivos de distribuição.
-- Ajustada configuração do projeto no `pyproject.toml`.
+Essas versões não são consideradas releases públicas estáveis e, por isso, não possuem changelog detalhado.
 
----
+Próximas versões
+1.1.0
 
-# 1.0.5
+Possíveis melhorias planejadas:
 
-## Desenvolvimento interno
+Adição de mais comandos Samsung.
+Expansão dos recursos de controle.
+Melhorias na descoberta automática.
+Melhor tratamento de erros.
+Mais exemplos.
+Expansão da documentação.
+Melhorias de compatibilidade com diferentes modelos de TV.
+2.0.0
 
-Versão usada durante o desenvolvimento antes da publicação.
+Possíveis mudanças futuras:
 
-## Alterações
+Evolução da arquitetura interna.
+Expansão dos recursos de automação.
+Suporte ampliado para diferentes modelos e versões do Tizen.
+Expansão da API pública.
+Novos recursos de comunicação com a TV.
+Contribuindo
 
-- Testes iniciais da biblioteca.
-- Implementação dos principais comandos.
-- Testes de conexão WebSocket.
-- Criação da estrutura inicial do pacote.
-
----
-
-# 1.0.4
-
-## Desenvolvimento interno
-
-- Melhorias na estrutura do código.
-- Ajustes nos módulos internos.
-- Testes com diferentes modelos de TV Samsung.
-
----
-
-# 1.0.3
-
-## Desenvolvimento interno
-
-- Implementação inicial das funções de controle.
-- Primeiros testes com Samsung Tizen.
-- Ajustes na comunicação WebSocket.
-
----
-
-# 1.0.2
-
-## Desenvolvimento interno
-
-- Primeira base funcional do projeto.
-- Criação das classes principais.
-- Testes iniciais de comandos.
-
----
-
-# Próximas versões
-
-Planejado para versões futuras:
-
-## 1.1.0
-
-Possíveis novidades:
-
-- Mais comandos Samsung.
-- Melhor descoberta automática de TVs.
-- Melhor tratamento de erros.
-- Mais exemplos.
-- Melhor documentação.
-
----
-
-## 2.0.0
-
-Possíveis novidades:
-
-- Nova arquitetura interna.
-- Mais recursos de automação.
-- Suporte ampliado para modelos Samsung.
-- API mais completa.
-
----
-
-# Como contribuir
-
-Sugestões e melhorias podem ser enviadas pelo GitHub:
+Sugestões, correções e novas funcionalidades podem ser enviadas através do repositório do projeto no GitHub:
 
 https://github.com/LightPPR2/SAMTVS_BYVICTOR
 
----
+Antes de contribuir, consulte a estrutura atual do projeto e as diretrizes disponíveis no repositório.
 
-# Links
-
-GitHub:
+Links
+GitHub
 
 https://github.com/LightPPR2/SAMTVS_BYVICTOR
 
-PyPI:
+PyPI
 
 https://pypi.org/project/samtvs-byvictor/
-
-as versões 1.0.5 pra baixo foram uploads que não deram certo;
